@@ -24,11 +24,6 @@ variable "PROTON_MAIL_VERIFICATION" {
   type        = string
 }
 
-variable "PROTON_MAIL_SPF" {
-  description = "SPF record for the domain"
-  type        = string
-}
-
 variable "PROTON_MAIL_DOMAIN_KEY_1" {
   description = "DKIM public key 1"
   type        = string

@@ -8,7 +8,7 @@ resource "aws_route53_record" "proton_mail_txt" {
 
   records = [
     var.PROTON_MAIL_VERIFICATION,
-    var.PROTON_MAIL_SPF
+    "v=spf1 include:_spf.protonmail.ch mx ~all"
   ]
 }
 
