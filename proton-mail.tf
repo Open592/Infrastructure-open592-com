@@ -1,17 +1,5 @@
 # DNS settings required for proton mail
 
-resource "aws_route53_record" "proton_mail_txt" {
-  zone_id = aws_route53_zone.root_zone.zone_id
-  name    = aws_route53_zone.root_zone.name
-  type    = "TXT"
-  ttl     = 3600
-
-  records = [
-    var.PROTON_MAIL_VERIFICATION,
-    "v=spf1 include:_spf.protonmail.ch mx ~all"
-  ]
-}
-
 resource "aws_route53_record" "proton_mail_mx" {
   zone_id = aws_route53_zone.root_zone.zone_id
   name    = aws_route53_zone.root_zone.name
